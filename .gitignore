@@ -1,0 +1,29 @@
+# Terraform local working directories
+**/.terraform/*
+
+# Terraform state and plans
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
+
+# Local Terraform variables may contain credentials or environment-specific values
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+!*.tfvars.json.example
+
+# Sensitive key material
+*.pem
+*.key
+
+# Documentation files
+*.md
+
+# OS and editor files
+.DS_Store
+.vscode/
+.idea/
+
+
