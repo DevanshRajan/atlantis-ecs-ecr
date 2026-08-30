@@ -10,6 +10,7 @@ output "alb_dns_name" {
   value       = module.alb.alb_dns_name
 }
 
+
 output "alb_url" {
   description = "Clickable HTTP Web URL to open the application in browser"
   value       = "http://${module.alb.alb_dns_name}"
