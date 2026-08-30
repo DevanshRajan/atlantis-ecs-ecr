@@ -14,4 +14,3 @@ projects:
       enabled: true
     apply_requirements:
       - approved
-    workflow: default
