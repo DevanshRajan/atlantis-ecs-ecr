@@ -7,7 +7,7 @@ environment = "production"
 tags = {
   Project   = "Terraform-ECS-ECR"
   ManagedBy = "Terraform"
-  LabOwner  = "George Container Labs"
+  LabOwner  = "Surender Container Labs"
 }
 
 # ------------------------------------------------------------------------------
