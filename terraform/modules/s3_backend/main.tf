@@ -13,8 +13,13 @@
 
 resource "aws_s3_bucket" "state" {
   bucket        = var.bucket_name
-  force_destroy = true
+  force_destroy = false
   tags          = merge(var.tags, { Name = var.bucket_name })
+
+  # This bucket holds this project's own state; never let a plan destroy it.
+  lifecycle {
+    prevent_destroy = true
+  }
 }
 
 resource "aws_s3_bucket_versioning" "state" {
@@ -53,4 +58,8 @@ resource "aws_dynamodb_table" "locks" {
   }
 
   tags = merge(var.tags, { Name = var.dynamodb_table_name })
+
+  lifecycle {
+    prevent_destroy = true
+  }
 }

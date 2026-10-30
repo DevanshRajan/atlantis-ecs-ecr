@@ -12,6 +12,8 @@ crash.*.log
 *.tfvars
 *.tfvars.json
 !*.tfvars.example
+# Non-secret production values, required by Atlantis
+!terraform/terraform.tfvars
 !*.tfvars.json.example
 
 # Sensitive key material
