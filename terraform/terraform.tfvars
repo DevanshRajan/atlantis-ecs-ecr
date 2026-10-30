@@ -27,7 +27,7 @@ task_sg_name = "ecs-task-sg"
 # ------------------------------------------------------------------------------
 # 2. S3 Backend Remote State Storage
 # ------------------------------------------------------------------------------
-create_s3_backend      = true
+create_s3_backend      = false # bucket and lock table already exist (bootstrapped); backend.tf depends on them
 s3_backend_bucket_name = "ecs-secrets-tf-state-bucket"
 dynamodb_table_name    = "terraform-state-locks"
 

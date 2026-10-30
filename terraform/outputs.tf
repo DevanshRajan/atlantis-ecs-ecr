@@ -47,7 +47,7 @@ output "task_role_arn" {
 
 output "s3_backend_bucket_name" {
   description = "Name of S3 Bucket storing remote state file"
-  value       = length(module.s3_backend) > 0 ? module.s3_backend[0].bucket_name : var.s3_backend_bucket_name
+  value       = length(module.s3_backend) > 0 ? module.s3_backend[0].s3_bucket_name : var.s3_backend_bucket_name
 }
 
 output "dynamodb_table_name" {
